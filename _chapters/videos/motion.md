@@ -57,13 +57,13 @@ $I(x,y,t) = I(x+u,y+v,t+ \Delta t)$
 Under assumption 2 the right hand side can be approximate by the first two terms in the Taylor series:
 
 
-$I(x,y,t) = I(x+u,y+v,t+ \Delta t) \approx I(x,y,t) + I_{x}*u + I_{y}*v +I_{t}* \Delta t$ 
+$I(x,y,t) = I(x+u,y+v,t+ \Delta t) {\approx} I(x,y,t) + I_{x}*u + I_{y}*v +I_{t}* \Delta t$ 
 
 Where $I_{x}$ is the image derivative along $x$, $I_{y}$ is the image derivative along $y$, abd $I_{t}$ is the image derivative along $t$. 
 
 This will result in:
 
-$I_{x}*u + I_{y}*v +I_{t}* \Delta t \approx 0$
+$I_{x}*u + I_{y}*v +I_{t}* \Delta t {\approx} 0$
 
 We can set $\Delta t = 1$ (velocity estimation can be achieved by taking $\Delta t$ into account), and write the equation in a vectorize form: 
 
