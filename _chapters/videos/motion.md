@@ -11,7 +11,7 @@ order: 15 # Lecture number for 2020
 **From Images To Videos** \
 -- Video is a sequence of frames capture over time. As a result, the image now is a function of the location and time, namely $I(x,y,t)$.
 
--- Optical flow (from Wikipedia) is the pattern of apparent motion of objects, surfaces, and edges in a visual scene caused by the relative motion between an observer and a scene. 
+-- Optical flow (from Wikipedia) is the pattern of apparent motion of objects, surfaces, and edges in a visual scene caused by the relative motion between an observer and a scene
 
 It is important to note that apparent motion can be cause by lighting changes without actual motion. We can think of a rotating sphere under fix lighting versus a stationary sphere under moving illumination. 
 
