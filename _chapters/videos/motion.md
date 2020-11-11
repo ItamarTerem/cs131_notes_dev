@@ -5,9 +5,19 @@ order: 15 # Lecture number for 2020
 ---
 
 # Table of Contents
-**
+**Outlined content of Lecture 15 CS 131 Fall 2020
 
-# Optical Flow - Itamar
+1. 15.1: Optical Flow
+    - At a high level, optical flow is the observation of moving images as a function of location and time. The notes on this component of the lecture outline not only the potential applications of motion based data, such as medical imaging, but a concise derivation of the optical flow equation and an outline of the aperature problem.
+2. 15.2: Lukas-Kanade Method
+    - The Lukas-Kanade Method is one method of determining the direction of optical vectors. More specifically, this approach applies the spatial coherence constraint, which assumes that neighboring pixels in an image have the same value for optical flow, which is why this method is usually used for calculations in which the change in pixels between frames is relatively small.
+3. 15.3: Pyramids for Large Motion
+    - Whereas the Lukas-Kanade Method for optical flow assumes a small change in pixels between frames, this model can fail dramatically when applied to larger moving systems of pixels. The Pyramids for Large Motion method applies a similar methodology to the sliding window method of image analysis in that it generates a pyramid of images for the purposes of 
+4. 15.4: Horn-Schunk Method
+5. 15.5: Motion Segmentation
+6. 15.6: Motion: Applications
+
+# Optical Flow
 **From Images To Videos** \
 -- Video is a sequence of frames capture over time. As a result, the image now is a function of the location and time, namely $I(x,y,t)$.
 
@@ -97,13 +107,13 @@ In the next sections we will learn about methods to solve the optical flow equat
 
 
 
-# Lukas - Kanade Method - Atem
+# Lukas - Kanade Method
 
 In the previous section we defined the problem of optical flow and derived equations to help us esitmate the motion vectors of individual pixels in an image. Now we propose three methods for solving these equations. We will first introduce the Lukas-Kanade method. 
 
 **Approach**
 
-With only one equation and two unknows, it is impossible to estimate the image motion given by $(u, v)$ since solving for $u$ and $v$ requires atleast two equations which means that we need more equations to solve for the unknowns. 
+With only one equation and two unknows, it is impossible to estimate the image motion given by $(u, v)$ since solving for $u$ and $v$ requires at least two equations which means that we need more equations to solve for the unknowns. 
 
 To derive a system of equations, the Lukas-Kanade method applies the **Spatial coherence constraint** (spatial coherence introduced in the previous section) to the system; this assumes that neighboring pixels have the same optical flow value, $(u, v)$. Applying this constraint to a $5 \times 5$ window in the image yields 25 equations per pixel as follows:
 
@@ -197,7 +207,7 @@ The Lukas-Kanade method is used under the constraint of assumptions of optical f
 
 In the next section we improve on the Lukas-Kanade to mitigate some of the errors outlined above.
 
-# Pyramid For Large Motion - Anatole
+# Pyramids For Large Motion
 Recall that, when implementing the Lukas-Kanade method, we assume that the change in position of pixels between frames is relatively small (usually the size of one pixel or less). However, if the movement across the image is large, the Lukas-Kanade method can fail dramatically. The solution is to use the Lukas-Kanade method on downsampled versions of the original video.
 
 **Lucas-Kanade Without Pyramids**
@@ -301,7 +311,7 @@ and replaced it with the following function.
 This regularization term works better as it assigns a smaller penalty of the magnitude of $u$ for larger values of $u$ than the quadratic term. 
 
 
-# Motion Segmentation - Aarushi Majumder
+# Motion Segmentation 
 Motion segmentation involves breaking down a picture not by the color of the pixels but such that each segment has a consistent and coherent motion.
 
 ![](https://i.imgur.com/fOJQRrp.jpg)
@@ -345,7 +355,7 @@ Finally, we must assign each pixel to the best estimated hypothesis, perform reg
 *(source: Silvio Savarese)*
 
 
-# Motion: Applications - Jie Gong
+# Motion: Applications 
 
 Once optical flow is estimated, there are a lot of useful applications with the motion features. We will cover some examples here. 
 
