@@ -32,7 +32,6 @@ It is important to note that apparent motion can be cause by lighting changes wi
 
 There are many applications where motion is a useful information. One application is in medical imaging. The figure below shows the optical flow motion of human brain (sagittal coronal and axial planes) during the cardiac cycle. The motion is due to blood pulsation and cerebrospinal fluid (CSF) flow. Abnormal motion can indicate pathologist conditions like Chiari I Malformation. (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6269230/) 
 
-
 ![](https://i.imgur.com/0GIJOql.gif)
 Brain in Motion © 2020 Itamar Terem
 
