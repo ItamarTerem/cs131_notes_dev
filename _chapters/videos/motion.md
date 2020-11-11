@@ -12,10 +12,13 @@ order: 15 # Lecture number for 2020
 2. 15.2: Lukas-Kanade Method
     - The Lukas-Kanade Method is one method of determining the direction of optical vectors. More specifically, this approach applies the spatial coherence constraint, which assumes that neighboring pixels in an image have the same value for optical flow, which is why this method is usually used for calculations in which the change in pixels between frames is relatively small.
 3. 15.3: Pyramids for Large Motion
-    - Whereas the Lukas-Kanade Method for optical flow assumes a small change in pixels between frames, this model can fail dramatically when applied to larger moving systems of pixels. The Pyramids for Large Motion method applies a similar methodology to the sliding window method of image analysis in that it generates a pyramid of images for the purposes of 
+    - Whereas the Lukas-Kanade Method for optical flow assumes a small change in pixels between frames, this model can fail dramatically when applied to larger moving systems of pixels. The Pyramids for Large Motion method applies a similar methodology to the sliding window method of image analysis in that it generates a pyramid of images for the purposes of applying the Lukas-Kanade method to downsized sections of the original image.
 4. 15.4: Horn-Schunk Method
+    - The Horn-Schunk Method for optical flow involves minimiuzing a global energy function. There are three main parameters that one should keep track of, namely the constancy assumption, which states that the projection of every point looks the same in every frame, the smoothness assumption, which states that every point moves by small amounts in between frames, and the regularization constant, which is correlated with smaller values of flow.
 5. 15.5: Motion Segmentation
+    - Motion segmentation is the process by which an image can be broken down by colors such that each segment has a consistent and coherent motion. This process first entails parameterizing motion and substituting those expressions into the brightness consistency equation. To minimize error in the results of this process, we map out parameter vectors, into motion parameter space and perform k-means clustering on the affine motion parameter vectors.
 6. 15.6: Motion: Applications
+    - This section takes a deeper dive into the high level overview of the potential applications of Optical Flow, namely object tracking, segmenting objects based on motion cues, recognizing events and activities, and estimating 3D structure.
 
 # Optical Flow
 **From Images To Videos** \
@@ -228,8 +231,7 @@ This way, movement that is expressed over multiple pixels in the original image 
 As you can see, the Lucas-Kanade method now has many more consistent vectors defining the movement of the tree across the image.
 
 
-# Horn - Schunk Method - Ryan Samadi & Oscar O'Rahilly
-
+# Horn - Schunk Method
 The Horn-Schunk method is another way to compute optical flow. The central idea behind this method is through formulating flow as the following global energy function. 
 
 \begin{equation*}
